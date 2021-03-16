@@ -63,13 +63,13 @@ export default function HomeGrid() {
   return (
     <ul className='md:grid md:grid-cols-2 md:w-full'>
       <li className='mb-1 md:mb-0 border-black border md:border-t-2 md:border-r-1 md:border-b-1 md:border-l-2'>
-        <Quader images={amtImages} link='/amt' />
+        <Quader images={amtImages} link='/amt' color='#feed2e' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-2 md:border-r-2 md:border-b-1 md:border-l-1'>
-        <Quader images={afeImages} link='/afe' />
+        <Quader images={afeImages} link='/afe' color='#feed2e' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-1 md:border-r-1 md:border-b-2 md:border-l-2'>
-        <Quader images={afzImages} link='/afz' />
+        <Quader images={afzImages} link='/afz' color='#feed2e' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-1 md:border-r-2 md:border-b-2 md:border-l-1'>
         <Scratchpad />

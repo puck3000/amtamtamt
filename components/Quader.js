@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-export default function Quader({ images, link }) {
+export default function Quader({ images, link, color }) {
   const [activeImg, setActiveImg] = useState(0)
   const [isSwitching, setIsSwitching] = useState(true)
 
@@ -42,7 +42,7 @@ export default function Quader({ images, link }) {
         <Link href={link}>
           <motion.div
             layoutId={link}
-            className='absolute inset-0 flex flex-col justify-center items-center bg-yellow-300 text-6xl z-10 cursor-pointer'
+            className={`absolute inset-0 flex flex-col justify-center items-center text-6xl z-10 cursor-pointer`}
             // style={{
             //   backdropFilter: 'blur(5px)',
             // }}
