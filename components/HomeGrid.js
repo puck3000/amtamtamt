@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Quader from './Quader'
+import Scratchpad from './Scratchpad'
 
 const amtImages = [
   {
@@ -49,7 +50,7 @@ const afzImages = [
     alt: 'AFZ',
   },
   {
-    src: '/sm_stuff/AMT-Facebook_Visuals_9.jpg',
+    src: '/sm_stuff/AMT-Facebook_Visuals_13.jpg',
     alt: 'AFZ',
   },
   {
@@ -71,9 +72,7 @@ export default function HomeGrid() {
         <Quader images={afzImages} link='/afz' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-1 md:border-r-2 md:border-b-2 md:border-l-1'>
-        <article className='w-full h-full flex justify-center items-center'>
-          <h2>Scratchpad</h2>
-        </article>
+        <Scratchpad />
       </li>
     </ul>
   )
