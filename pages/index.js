@@ -2,14 +2,14 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
+    <div className='w-screen h-screen bg-blue-400 flex flex-col'>
       <Head>
         <title>AmtAmtAmt</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <header>header</header>
-      <main>main</main>
+      <main className='flex-1 w-full h-full bg-blue-200'>main</main>
       <footer>footer</footer>
     </div>
   )
