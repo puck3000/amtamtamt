@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'NeueBit';
+    src: url('/fonts/NeueBit/NeueBit-Bold.woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  html {
+    font-family: 'NeueBit', sans;
+  }
+}
