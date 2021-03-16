@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-export default function Quader({ images }) {
+import Link from 'next/link'
+
+export default function Quader({ images, link }) {
   const [activeImg, setActiveImg] = useState(0)
   const [isSwitching, setIsSwitching] = useState(true)
 
@@ -36,12 +38,16 @@ export default function Quader({ images }) {
       onMouseLeave={() => setIsSwitching(true)}
     >
       {!isSwitching && (
-        <div
-          className='absolute inset-0 flex flex-col justify-center items-center text-6xl text-red-800 z-10'
-          style={{ backdropFilter: 'blur(5px)' }}
-        >
-          <h2 className='text-8xl'>{images[activeImg].alt}</h2>
-        </div>
+        <Link href={link}>
+          <div
+            className='absolute inset-0 flex flex-col justify-center items-center text-6xl text-red-800 z-10 cursor-pointer'
+            style={{
+              backdropFilter: 'brightness(0.6) hue-rotate(120deg) blur(5px)',
+            }}
+          >
+            <h2 className='text-8xl '>{images[activeImg].alt}</h2>
+          </div>
+        </Link>
       )}
 
       <div

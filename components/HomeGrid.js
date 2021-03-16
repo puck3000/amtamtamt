@@ -20,41 +20,41 @@ const amtImages = [
   },
 ]
 
-const afzImages = [
+const afeImages = [
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_6.jpg',
-    alt: 'AFZ',
+    alt: 'AFE',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_5.jpg',
-    alt: 'AFZ',
+    alt: 'AFE',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_7.jpg',
-    alt: 'AFZ',
+    alt: 'AFE',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_8.jpg',
-    alt: 'AFZ',
+    alt: 'AFE',
   },
 ]
 
-const afeImages = [
+const afzImages = [
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_10.jpg',
-    alt: 'AFE',
+    alt: 'AFZ',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_11.jpg',
-    alt: 'AFE',
+    alt: 'AFZ',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_9.jpg',
-    alt: 'AFE',
+    alt: 'AFZ',
   },
   {
     src: '/sm_stuff/AMT-Facebook_Visuals_12.jpg',
-    alt: 'AFE',
+    alt: 'AFZ',
   },
 ]
 
@@ -62,13 +62,13 @@ export default function HomeGrid() {
   return (
     <ul className='md:grid md:grid-cols-2 md:w-full'>
       <li className='mb-1 md:mb-0 border-black border md:border-t-2 md:border-r-1 md:border-b-1 md:border-l-2'>
-        <Quader images={amtImages} />
+        <Quader images={amtImages} link='/amt' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-2 md:border-r-2 md:border-b-1 md:border-l-1'>
-        <Quader images={afeImages} />
+        <Quader images={afeImages} link='/afe' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-1 md:border-r-1 md:border-b-2 md:border-l-2'>
-        <Quader images={afzImages} />
+        <Quader images={afzImages} link='/afz' />
       </li>
       <li className='mb-1 md:mb-0 border-black border md:border-t-1 md:border-r-2 md:border-b-2 md:border-l-1'>
         <article className='w-full h-full flex justify-center items-center'>
