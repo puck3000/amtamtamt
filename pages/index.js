@@ -1,15 +1,18 @@
 import Head from 'next/head'
+import HomeGrid from '../components/HomeGrid'
 
 export default function Home() {
   return (
-    <div className='w-screen h-screen bg-blue-400 flex flex-col'>
+    <div className='w-screen h-screen md:flex md:flex-col'>
       <Head>
         <title>AmtAmtAmt</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <header>header</header>
-      <main className='flex-1 w-full h-full bg-blue-200'></main>
+      <main className='w-full md:flex-1  flex flex-col items-center justify-center'>
+        <HomeGrid />
+      </main>
       <footer>footer</footer>
     </div>
   )
