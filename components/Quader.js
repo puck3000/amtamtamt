@@ -42,10 +42,10 @@ export default function Quader({ images, link, color }) {
         <Link href={link}>
           <motion.div
             layoutId={link}
-            className={`absolute inset-0 flex flex-col justify-center items-center text-6xl z-10 cursor-pointer`}
-            // style={{
-            //   backdropFilter: 'blur(5px)',
-            // }}
+            className={`absolute inset-0 flex flex-col justify-center items-center text-6xl z-10 cursor-pointer bg-${color} bg-opacity-80`}
+            style={{
+              backdropFilter: 'blur(5px)',
+            }}
           >
             <h2 className='text-8xl '>{images[activeImg].alt}</h2>
           </motion.div>
