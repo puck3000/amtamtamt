@@ -3,17 +3,17 @@ import HomeGrid from '../components/HomeGrid'
 
 export default function Home() {
   return (
-    <div className='w-screen h-screen md:flex md:flex-col'>
+    <div className='md:h-screen md:flex md:flex-col md:justify-center md:items-center'>
       <Head>
         <title>AmtAmtAmt</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <header>header</header>
-      <main className='w-full md:flex-1  flex flex-col items-center justify-center'>
+      {/* <header>header</header> */}
+      <main className='m-1 md:w-5/6'>
         <HomeGrid />
       </main>
-      <footer>footer</footer>
+      {/* <footer>footer</footer> */}
     </div>
   )
 }
