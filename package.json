@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-hook/media-query": "^1.1.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "framer-motion": "^3.10.5",
     "next": "10.0.9",

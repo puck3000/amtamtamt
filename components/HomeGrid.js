@@ -6,6 +6,7 @@ import Scratchpad from './Scratchpad'
 const amt_data = {
   title: 'AMT',
   claim: 'Iniziiert neue Ämter für die Herausforderungen von heute und morgen.',
+  link: '/',
   images: [
     {
       src: '/sm_stuff/AMT-Facebook_Visuals_2.jpg',
