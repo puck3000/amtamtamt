@@ -15,6 +15,26 @@ module.exports = {
         'afe-yellow': '#feed2e',
         'afz-blue': '#49b7e8',
       },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        xbounce: 'xbounce 1s infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        xbounce: {
+          '0%, 100%': {
+            transform: 'translateX(-25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateX(0)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 0.2, 1)',
+          },
+        },
+      },
     },
   },
   variants: {},

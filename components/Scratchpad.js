@@ -54,8 +54,12 @@ export default function Scratchpad() {
     >
       {isPlaying ? (
         <div className='relative w-full h-full flex justify-center items-center overflow-hidden'>
-          <p className={`absolute text-4xl left-8 bottom-4 `}>$: 0</p>
-          <div className='text-4xl absolute text-red-900 top-4 z-10'>
+          {/* CashCounter */}
+          <p className={`absolute text-2xl md:text-4xl left-8 bottom-4 `}>
+            $: 0
+          </p>
+          {/* Display Text */}
+          <div className='text-2xl md:text-4xl absolute text-red-900 top-4 z-10'>
             {counter > 10 ? (
               <a
                 href='https://www.amt-fuer-ermoeglichung.ch/support'
@@ -63,7 +67,8 @@ export default function Scratchpad() {
                 rel='noopener'
                 className='cursor-pointer'
               >
-                &rarr; Kultur ermöglichen
+                <span className='animation-wiggle'>&rarr;</span> Kultur
+                ermöglichen
               </a>
             ) : counter > 7 ? (
               <p>Kulturförderung leider oft auch nicht.</p>
@@ -73,6 +78,7 @@ export default function Scratchpad() {
               ''
             )}
           </div>
+          {/* Falling Benjamins */}
           <ul className='absolute inset-0 grid grid-cols-10'>
             {benjamins.map((dollar, i) => (
               <li
@@ -87,6 +93,7 @@ export default function Scratchpad() {
               </li>
             ))}
           </ul>
+          {/* Money Cup */}
           <motion.div
             drag
             dragConstraints={constraintsRef}
@@ -97,14 +104,14 @@ export default function Scratchpad() {
             className='cursor-pointer z-10'
           >
             <span
-              className='inline-block'
+              className='inline-block h-6 w-6  md:h-12 md:w-8'
               style={{
                 backgroundImage: 'url("/icons/cup.png")',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'contain',
                 backgroundPosition: 'center center',
-                height: '3rem',
-                width: '2rem',
+                // height: '3rem',
+                // width: '2rem',
               }}
             ></span>
           </motion.div>
