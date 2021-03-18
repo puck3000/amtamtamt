@@ -25,6 +25,11 @@ const amt_data = {
       alt: 'AMT',
     },
     {
+      src: '/img/MarkerDitter_HellaStudio_+.png',
+      alt: 'AFE',
+    },
+
+    {
       src: '/sm_stuff/AMT-Facebook_Visuals_4.jpg',
       alt: 'AMT',
     },
@@ -39,23 +44,15 @@ const afe_data = {
   link: 'https://www.amt-fuer-ermoeglichung.ch/',
   images: [
     {
-      src: '/sm_stuff/AMT-Facebook_Visuals_6.jpg',
-      alt: 'AFE',
-    },
-    {
       src: '/sm_stuff/AFE_Header_SUPPORT_Color.gif',
       alt: 'AFE',
     },
     {
-      src: '/sm_stuff/AMT-Facebook_Visuals_5.jpg',
-      alt: 'AFE',
+      src: '/img/AFE_ernst_jandl_Gun_Ditter.jpg',
+      alt: 'AFZ',
     },
     {
-      src: '/sm_stuff/AMT-Facebook_Visuals_7.jpg',
-      alt: 'AFE',
-    },
-    {
-      src: '/sm_stuff/AMT-Facebook_Visuals_8.jpg',
+      src: '/sm_stuff/AFE_Header_MISSION.gif',
       alt: 'AFE',
     },
   ],
@@ -69,23 +66,15 @@ const afz_data = {
   link: 'https://www.amt-fuer-zukunft.ch',
   images: [
     {
-      src: '/sm_stuff/AFE_Header_MISSION.gif',
-      alt: 'AFE',
-    },
-    {
-      src: '/sm_stuff/AMT-Facebook_Visuals_10.jpg',
+      src: '/img/AFZ_Hoody_Front.png',
       alt: 'AFZ',
     },
     {
-      src: '/sm_stuff/AMT-Facebook_Visuals_11.jpg',
+      src: '/img/AFZ_hyperspaceJump_ditter.png',
       alt: 'AFZ',
     },
     {
-      src: '/sm_stuff/AMT-Facebook_Visuals_13.jpg',
-      alt: 'AFZ',
-    },
-    {
-      src: '/sm_stuff/AMT-Facebook_Visuals_12.jpg',
+      src: '/img/AFZ_PlanetDitter_HellaStudio.png',
       alt: 'AFZ',
     },
   ],
