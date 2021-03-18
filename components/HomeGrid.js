@@ -9,6 +9,10 @@ const amt_data = {
   link: '/',
   images: [
     {
+      src: '/sm_stuff/AFE_Header_ORG.gif',
+      alt: 'AFE',
+    },
+    {
       src: '/sm_stuff/AMT-Facebook_Visuals_2.jpg',
       alt: 'AMT',
     },
@@ -39,6 +43,10 @@ const afe_data = {
       alt: 'AFE',
     },
     {
+      src: '/sm_stuff/AFE_Header_SUPPORT_Color.gif',
+      alt: 'AFE',
+    },
+    {
       src: '/sm_stuff/AMT-Facebook_Visuals_5.jpg',
       alt: 'AFE',
     },
@@ -61,6 +69,10 @@ const afz_data = {
   link: 'https://www.amt-fuer-zukunft.ch',
   images: [
     {
+      src: '/sm_stuff/AFE_Header_MISSION.gif',
+      alt: 'AFE',
+    },
+    {
       src: '/sm_stuff/AMT-Facebook_Visuals_10.jpg',
       alt: 'AFZ',
     },
@@ -82,18 +94,21 @@ const afz_data = {
 
 export default function HomeGrid() {
   return (
-    <ul id='homeGrid' className='grid grid-cols-1 md:grid-cols-2 min-h-screen'>
-      <li className='min-h-1/4 md:min-h-1/2'>
+    <ul
+      id='homeGrid'
+      className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 min-h-screen'
+    >
+      <li className=''>
         <Quader data={amt_data} />
       </li>
-      <li className='min-h-1/4 md:min-h-1/2'>
+      <li className=''>
         <Quader data={afe_data} />
       </li>
-      <li className='min-h-1/4 md:min-h-1/2'>
+      <li className=''>
         <Quader data={afz_data} />
       </li>
-      <li className='min-h-1/2 md:min-h-1/2'>
-        <Scratchpad />
+      <li className=''>
+        <Scratchpad color='#feed2e' />
       </li>
     </ul>
   )

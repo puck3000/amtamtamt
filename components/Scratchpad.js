@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
-export default function Scratchpad() {
+export default function Scratchpad(color) {
   const [boardDimensions, setBoardDimensions] = useState(300)
   const [isPlaying, setIsPlaying] = useState(false)
   const [counter, setCounter] = useState(0)
@@ -59,8 +59,24 @@ export default function Scratchpad() {
             $: 0
           </p>
           {/* Display Text */}
-          <div className='text-2xl md:text-4xl absolute text-red-900 top-4 z-10'>
-            {counter > 10 ? (
+          <div
+            className='text-2xl md:text-4xl absolute text-center top-0 right-0 left-0 z-10'
+            style={{
+              backgroundColor: '#feed2e',
+            }}
+          >
+            {counter > 5 && (
+              <p className={counter > 7 ? 'text-xl' : ''}>
+                funktioniert nicht?
+              </p>
+            )}
+
+            {counter > 7 && (
+              <p className={counter > 10 ? 'text-xl' : ''}>
+                Kulturförderung leider oft auch nicht.
+              </p>
+            )}
+            {counter > 10 && (
               <a
                 href='https://www.amt-fuer-ermoeglichung.ch/support'
                 target='_blank'
@@ -70,12 +86,6 @@ export default function Scratchpad() {
                 <span className='animation-wiggle'>&rarr;</span> Kultur
                 ermöglichen
               </a>
-            ) : counter > 7 ? (
-              <p>Kulturförderung leider oft auch nicht.</p>
-            ) : counter > 5 ? (
-              <p>funktioniert nicht?</p>
-            ) : (
-              ''
             )}
           </div>
           {/* Falling Benjamins */}
