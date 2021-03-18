@@ -30,7 +30,7 @@ const amt_data = {
 
 const afe_data = {
   title: 'AFE',
-  amtName: 'Amt für Entwicklung',
+  amtName: 'Amt für Ermöglichung',
   claim: 'Entwickelt Neues, macht möglich und setzt um.',
   link: 'https://www.amt-fuer-ermoeglichung.ch/',
   images: [

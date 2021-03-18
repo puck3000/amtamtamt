@@ -83,7 +83,7 @@ export default function Scratchpad() {
             {benjamins.map((dollar, i) => (
               <li
                 key={i}
-                className={`mx-auto text-3xl transition-transform ease-in transform -mt-6 duration-1000 ${
+                className={`mx-auto text-3xl lg:text-4xl 2xl:text-5xl transition-transform ease-in transform -mt-6 duration-1000 ${
                   fallingBenjamin == dollar.id
                     ? 'translate-y-full'
                     : 'opacity-0'
@@ -98,22 +98,11 @@ export default function Scratchpad() {
             drag
             dragConstraints={constraintsRef}
             dragElastic={0}
-            whileHover={{ scale: 1.7 }}
-            whileTap={{ scale: 2.5 }}
-            // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
-            className='cursor-pointer z-10'
+            whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 2 }}
+            className='cursor-pointer z-10 text-3xl md:text-4xl xl:text-5xl 2xl:text-8xl '
           >
-            <span
-              className='inline-block h-6 w-6  md:h-12 md:w-8'
-              style={{
-                backgroundImage: 'url("/icons/cup.png")',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-                backgroundPosition: 'center center',
-                // height: '3rem',
-                // width: '2rem',
-              }}
-            ></span>
+            ☕
           </motion.div>
         </div>
       ) : (
