@@ -113,6 +113,13 @@ export default function Scratchpad() {
       ) : (
         <button onClick={() => playGame()}>Play</button>
       )}
+      {/* <style jsx>{`
+        @media screen and (max-width: 768px) {
+          article {
+            height: 50vh;
+          }
+        }
+      `}</style> */}
     </article>
   )
 }

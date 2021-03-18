@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       {/* <header>header</header> */}
-      <main className='m-1 md:w-5/6'>
+      <main className='w-screen min-h-screen'>
         <HomeGrid />
       </main>
       {/* <footer>footer</footer> */}

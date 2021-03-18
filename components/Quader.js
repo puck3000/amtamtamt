@@ -31,27 +31,40 @@ export default function Quader({ data }) {
 
   return (
     <article
-      className={`relative aspect-w-16 aspect-h-9 overflow-hidden ${
+      className={`relative w-full h-full overflow-hidden ${
         hovering ? '' : 'hovering'
       }`}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {hovering && (
-        <AnimatePresence>
-          <motion.div
-            className={`absolute inset-0 z-10`}
-            style={{
-              backdropFilter: 'blur(5px)',
-              backgroundColor: data.color,
-            }}
-          >
-            <h2 className='ml-2 text-8xl '>{data.title}</h2>
-            <h3 className='claim'>
-              <span>&rarr;</span> {data.claim}
+        <motion.div
+          className={`hoverCard absolute inset-0 z-10 py-2 px-4`}
+          style={{
+            backgroundColor: data.color,
+          }}
+        >
+          <div className='flex justify-between'>
+            <h2 className='title inline'>{data.title}</h2>
+            {data.link && (
+              <a
+                href={data.link}
+                target='_blank'
+                rel='noopener'
+                className='inline text-7xl md:text-9xl'
+              >
+                &rarr;
+              </a>
+            )}
+          </div>
+          {data.amtName && (
+            <h3 className='amtName leading-none -mt-2 mb-4 md:-mt-4'>
+              {data.amtName}
             </h3>
-          </motion.div>
-        </AnimatePresence>
+          )}
+
+          <p className='claim'>{data.claim}</p>
+        </motion.div>
       )}
 
       <div

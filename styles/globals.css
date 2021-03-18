@@ -20,7 +20,41 @@
   html {
     font-family: 'NeueBit', sans;
   }
-  h2 {
+  h2,
+  .amtName {
     font-family: 'MaisonNeue', sans;
+  }
+}
+
+@layer components {
+  #homeGrid .hoverCard {
+    border: black solid 0.7rem;
+  }
+  #homeGrid .title {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  #homeGrid .claim {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  #homeGrid .arrow {
+    font-size: 3rem;
+  }
+  @media screen and (min-width: 768px) {
+    #homeGrid .hoverCard {
+      border: black solid 1.25rem;
+    }
+    #homeGrid .title {
+      font-size: 8rem;
+      line-height: 1;
+    }
+    #homeGrid .claim {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    #homeGrid .arrow {
+      font-size: 3rem;
+    }
   }
 }
