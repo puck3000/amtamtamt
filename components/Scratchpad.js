@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function Scratchpad() {
   const [boardDimensions, setBoardDimensions] = useState(300)
+  const [benjamins, setBenjamins] = useState([])
   const [isPlaying, setIsPlaying] = useState(false)
-  const [benjaminId, setBenjaminId] = useState(-100)
 
   const constraintsRef = useRef(null)
 
@@ -38,7 +38,9 @@ export default function Scratchpad() {
 
   const playGame = () => {
     setIsPlaying(true)
-    setBenjaminId(0)
+    for (let i = 0; i < 10; i++) {
+      setBenjamins((benjamins) => [...benjamins, fallingBenjamins()])
+    }
   }
 
   useEffect(() => {
@@ -50,14 +52,6 @@ export default function Scratchpad() {
     }
   }, [constraintsRef])
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setBenjaminId((benjaminId) => benjaminId + 1)
-    }, 2000)
-    return () => {
-      clearTimeout(timer)
-    }
-  })
   return (
     <article
       ref={constraintsRef}
@@ -65,13 +59,12 @@ export default function Scratchpad() {
     >
       {isPlaying ? (
         <div className='relative w-full h-full flex justify-center items-center overflow-hidden'>
-          <p
-            className={`absolute text-4xl left-8 top-4 ${
-              benjaminId == 2 ? 'animate-ping' : ''
-            }`}
-          >
-            $: 0
-          </p>
+          <p className={`absolute text-4xl left-8 top-4 `}>$: 0</p>
+          <ul class='absolute inset-0 grid grid-cols-10'>
+            {benjamins.map((dollar, i) => (
+              <li className={`mx-auto  transition  duration-1000 `}>$</li>
+            ))}
+          </ul>
           <motion.div
             drag
             dragConstraints={constraintsRef}
@@ -79,7 +72,7 @@ export default function Scratchpad() {
             whileHover={{ scale: 1.7 }}
             whileTap={{ scale: 2.5 }}
             // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
-            className='cursor-pointer'
+            className='cursor-pointer z-10'
           >
             <span
               className='inline-block'
@@ -93,8 +86,8 @@ export default function Scratchpad() {
               }}
             ></span>
           </motion.div>
-          {fallingBenjamins()}
-          {benjaminId > 7 ? (
+
+          {/* {benjaminId > 7 ? (
             benjaminId > 9 ? (
               benjaminId > 12 ? (
                 <a
@@ -115,7 +108,7 @@ export default function Scratchpad() {
             )
           ) : (
             <></>
-          )}
+          )} */}
         </div>
       ) : (
         <button onClick={() => playGame()}>Play</button>

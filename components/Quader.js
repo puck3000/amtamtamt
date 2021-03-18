@@ -1,22 +1,21 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
-export default function Quader({ images, link, color }) {
+export default function Quader({ data }) {
   const [activeImg, setActiveImg] = useState(0)
-  const [isSwitching, setIsSwitching] = useState(true)
+  const [hovering, setIsHovering] = useState(false)
 
   function randomTime() {
     return Math.floor(Math.random() * 1500 + 500)
   }
 
   function switchImg() {
-    setActiveImg((activeImg + 1) % images.length)
+    setActiveImg((activeImg + 1) % data.images.length)
   }
 
   function randomImgSwitcher() {
-    while (isSwitching) {
+    while (!hovering) {
       setTimeout(() => {
         switchImg()
       }, randomTime())
@@ -33,33 +32,36 @@ export default function Quader({ images, link, color }) {
   return (
     <article
       className={`relative aspect-w-16 aspect-h-9 overflow-hidden ${
-        isSwitching ? '' : 'hovering'
+        hovering ? '' : 'hovering'
       }`}
-      onMouseEnter={() => setIsSwitching(false)}
-      onMouseLeave={() => setIsSwitching(true)}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
     >
-      {!isSwitching && (
-        <Link href={link}>
+      {hovering && (
+        <AnimatePresence>
           <motion.div
-            layoutId={link}
-            className={`absolute inset-0 flex flex-col justify-center items-center text-6xl z-10 cursor-pointer bg-${color} bg-opacity-80`}
+            className={`absolute inset-0 z-10`}
             style={{
               backdropFilter: 'blur(5px)',
+              backgroundColor: data.color,
             }}
           >
-            <h2 className='text-8xl '>{images[activeImg].alt}</h2>
+            <h2 className='ml-2 text-8xl '>{data.title}</h2>
+            <h3 className='claim'>
+              <span>&rarr;</span> {data.claim}
+            </h3>
           </motion.div>
-        </Link>
+        </AnimatePresence>
       )}
 
       <div
         className={`absolute inset-0 transition ${
-          isSwitching ? '' : 'transform scale-125'
+          hovering ? 'transform scale-125' : ''
         }`}
       >
         <Image
-          src={images[activeImg].src}
-          alt={images[activeImg].alt}
+          src={data.images[activeImg].src}
+          alt={data.images[activeImg].alt}
           layout='fill'
           objectFit='cover'
         />

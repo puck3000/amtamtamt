@@ -10,7 +10,17 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'MaisonNeue';
+    src: url('/fonts/MaisonNeue-Bold.otf');
+    font-weight: 900;
+    font-style: normal;
+  }
+
   html {
     font-family: 'NeueBit', sans;
+  }
+  h2 {
+    font-family: 'MaisonNeue', sans;
   }
 }
