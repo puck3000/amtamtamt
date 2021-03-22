@@ -56,7 +56,7 @@ const afe_data = {
       alt: 'AFE',
     },
   ],
-  color: '#feed2e',
+  color: ' #fbf900',
 }
 
 const afz_data = {
@@ -78,7 +78,7 @@ const afz_data = {
       alt: 'AFZ',
     },
   ],
-  color: '#49b7e8',
+  color: '#00a5eb',
 }
 
 export default function HomeGrid() {
