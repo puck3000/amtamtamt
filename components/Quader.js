@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useMediaQuery, useMediaQueries } from '@react-hook/media-query'
+import Link from 'next/link'
 
 export default function Quader({ data }) {
   const [activeImg, setActiveImg] = useState(0)
@@ -48,25 +49,44 @@ export default function Quader({ data }) {
                 backgroundColor: data.color,
               }}
             >
-              <a
-                className='cursor-pointer'
-                href={data.link}
-                target='_blank'
-                rel='noopener'
-              >
-                <div className='w-full h-full flex flex-col justify-center'>
-                  <h2 className='title text-center mt-2'>{data.title}</h2>
-                  {data.amtName && (
-                    <h3 className='amtName leading-none -mt-2 mb-4 md:-mt-4 text-center'>
-                      {data.amtName}
-                    </h3>
-                  )}
-                  <p className='text-center text-4xl'>
-                    <span className='mr-4'>&rarr;</span>
-                    {data.claim}
-                  </p>
-                </div>
-              </a>
+              {data?.linkInternal ? (
+                <Link href={data.link}>
+                  <a className='cursor-pointer'>
+                    <div className='w-full h-full flex flex-col justify-center'>
+                      <h2 className='title text-center mt-2'>{data.title}</h2>
+                      {data.amtName && (
+                        <h3 className='amtName leading-none -mt-2 mb-4 md:-mt-4 text-center'>
+                          {data.amtName}
+                        </h3>
+                      )}
+                      <p className='text-center text-4xl'>
+                        <span className='mr-4'>&rarr;</span>
+                        {data.claim}
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+              ) : (
+                <a
+                  className='cursor-pointer'
+                  href={data.link}
+                  target='_blank'
+                  rel='noopener'
+                >
+                  <div className='w-full h-full flex flex-col justify-center'>
+                    <h2 className='title text-center mt-2'>{data.title}</h2>
+                    {data.amtName && (
+                      <h3 className='amtName leading-none -mt-2 mb-4 md:-mt-4 text-center'>
+                        {data.amtName}
+                      </h3>
+                    )}
+                    <p className='text-center text-4xl'>
+                      <span className='mr-4'>&rarr;</span>
+                      {data.claim}
+                    </p>
+                  </div>
+                </a>
+              )}
             </motion.div>
           )
         : hovering && (
@@ -78,7 +98,11 @@ export default function Quader({ data }) {
             >
               <div className='flex justify-between'>
                 <h2 className='title inline'>{data.title}</h2>
-                {data.link && (
+                {data.linkInternal ? (
+                  <Link href={data.link}>
+                    <a className='inline text-7xl md:text-9xl'>&rarr;</a>
+                  </Link>
+                ) : (
                   <a
                     href={data.link}
                     target='_blank'
