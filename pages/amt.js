@@ -11,26 +11,39 @@ export default function Amt() {
       </Head>
 
       {/* <header>header</header> */}
-      <main className='m-1 md:w-5/6 md:aspect-w-16 md:aspect-h-9'>
-        <motion.div layoutId='/amt'>
-          <h1>AMT AMT AMT</h1>
-          <h2>
-            Iniziiert neue Ämter für die Herausforderungen von heute und morgen.
-          </h2>
-          <p>
-            Die neuen Ämter hinterfragen das Gegenwärtige, forschen an
-            zukünftigen Möglichkeiten, entwickeln Projekte, verbinden Menschen
-            und ermöglichen Neues. Die neuen Ämter verpflichten sich einer
-            bestimmten Sache, übernehmen Verantwortung, bieten Unterstützung.
-            Die neuen Ämter stellen sich neuen Herausforderungen und werfen
-            Bürokratie, altherrgebrachte Strukturen und nostalgischen Ballast
-            ab, um mit dem Wandel der Zeit Schritt zu halten.
-          </p>
+      <main className='w-full h-full flex justify-center items-center'>
+        <motion.div className='m-6' layoutId='/amt'>
+          <div className='block text-9xl' style={{ fontFamily: 'NeueBit' }}>
+            ✨
+          </div>
+          <h1
+            className='text-2xl md-text-3xl text-bold uppercase'
+            style={{ fontFamily: 'MaisonNeue' }}
+          >
+            AmtAmtAmt
+          </h1>
+          <article className='max-w-1xl md:w-2/3 md:max-w-4xl lg:w-1/2'>
+            <h2
+              className='text-xl leading-4 mb-4'
+              style={{ fontFamily: 'NeueBit' }}
+            >
+              Iniziiert neue Ämter für die Herausforderungen von heute und
+              morgen.
+            </h2>
+            <p className='mb-6 text-xl leading-4 md:leading-none'>
+              Die neuen Ämter hinterfragen das Gegenwärtige, forschen an
+              zukünftigen Möglichkeiten, entwickeln Projekte, verbinden Menschen
+              und ermöglichen Neues. Die neuen Ämter verpflichten sich einer
+              bestimmten Sache, übernehmen Verantwortung, bieten Unterstützung.
+              Die neuen Ämter stellen sich neuen Herausforderungen und werfen
+              Bürokratie, altherrgebrachte Strukturen und nostalgischen Ballast
+              ab, um mit dem Wandel der Zeit Schritt zu halten.
+            </p>
+          </article>
           <Link href='/'>
-            <h2>zum AmtAmtAmt</h2>
-          </Link>
-          <Link href='/'>
-            <h2 className='cursor-pointer'>zurück zur Übersicht</h2>
+            <button className='cursor-pointer border-4 uppercase border-black px-2 py-1'>
+              <h2 className='leading-none pt-1'>zurück zur Übersicht</h2>
+            </button>
           </Link>
         </motion.div>
       </main>
