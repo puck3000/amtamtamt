@@ -12,6 +12,7 @@ export default function Home() {
       {/* <header>header</header> */}
       <main className='w-screen min-h-screen'>
         <HomeGrid />
+        <div className='hidden doNotPurge'></div>
       </main>
       {/* <footer>footer</footer> */}
     </div>
