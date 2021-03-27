@@ -60,7 +60,9 @@
 }
 
 @layer utilities {
+  /* purgecss start ignore */
   .doNotPurge {
     @apply order-1 order-2 order-3 order-4;
   }
+  /* purgecss end ignore */
 }
