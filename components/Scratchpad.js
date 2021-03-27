@@ -62,7 +62,7 @@ export default function Scratchpad(color) {
           <div
             className='text-2xl md:text-4xl absolute text-center top-0 right-0 left-0 z-10'
             style={{
-              backgroundColor: '#feed2e',
+              backgroundColor: '#fbf900',
             }}
           >
             {counter > 5 && (
