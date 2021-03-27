@@ -31,6 +31,9 @@ export default function Quader({ data }) {
 
   useEffect(() => {
     randomImgSwitcher()
+    return () => {
+      clearTimeout()
+    }
   })
 
   return (

@@ -1,5 +1,6 @@
 import { m } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import Quader from './Quader'
 import Scratchpad from './Scratchpad'
 
@@ -82,22 +83,32 @@ const afz_data = {
   color: '#00a5eb',
 }
 
+function shuffleArray() {
+  let arr = [1, 2, 3, 4]
+  arr.sort(() => Math.random() - 0.5)
+  return arr
+}
+
 export default function HomeGrid() {
+  const [arr, setArr] = useState([])
+  useEffect(() => {
+    setArr(() => shuffleArray(arr))
+  }, [])
   return (
     <ul
       id='homeGrid'
       className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 min-h-screen'
     >
-      <li className=''>
+      <li className={`order-${arr[0]}`}>
         <Quader data={amt_data} />
       </li>
-      <li className=''>
+      <li className={`order-${arr[1]}`}>
         <Quader data={afe_data} />
       </li>
-      <li className=''>
+      <li className={`order-${arr[2]}`}>
         <Quader data={afz_data} />
       </li>
-      <li className=''>
+      <li className={`order-${arr[3]}`}>
         <Scratchpad color='#feed2e' />
       </li>
     </ul>
