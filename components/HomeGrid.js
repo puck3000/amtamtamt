@@ -1,5 +1,3 @@
-import { m } from 'framer-motion'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Quader from './Quader'
 import Scratchpad from './Scratchpad'

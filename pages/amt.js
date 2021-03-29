@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 export default function Amt() {
   return (
@@ -12,7 +11,7 @@ export default function Amt() {
 
       {/* <header>header</header> */}
       <main className='w-full h-full flex justify-center items-center'>
-        <motion.div className='m-6' layoutId='/amt'>
+        <div className='m-6' layoutId='/amt'>
           <div className='block text-9xl' style={{ fontFamily: 'NeueBit' }}>
             ✨
           </div>
@@ -45,7 +44,7 @@ export default function Amt() {
               <h2 className='leading-none pt-1'>zurück zur Übersicht</h2>
             </button>
           </Link>
-        </motion.div>
+        </div>
       </main>
       {/* <footer>footer</footer> */}
     </div>

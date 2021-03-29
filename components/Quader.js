@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import { useMediaQuery, useMediaQueries } from '@react-hook/media-query'
 import Link from 'next/link'
 
@@ -46,7 +45,7 @@ export default function Quader({ data }) {
     >
       {matches
         ? hovering && (
-            <motion.div
+            <div
               className={`hoverCard absolute inset-0 z-10 py-2 px-4`}
               style={{
                 backgroundColor: data.color,
@@ -90,10 +89,10 @@ export default function Quader({ data }) {
                   </div>
                 </a>
               )}
-            </motion.div>
+            </div>
           )
         : hovering && (
-            <motion.div
+            <div
               className={`hoverCard absolute inset-0 z-10 py-2 px-4`}
               style={{
                 backgroundColor: data.color,
@@ -123,7 +122,7 @@ export default function Quader({ data }) {
               )}
 
               <p className='claim'>{data.claim}</p>
-            </motion.div>
+            </div>
           )}
 
       <div
