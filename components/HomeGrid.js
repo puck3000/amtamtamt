@@ -84,14 +84,18 @@ const afz_data = {
 function shuffleArray() {
   let arr = [1, 2, 3, 4]
   arr.sort(() => Math.random() - 0.5)
+  console.log(arr)
   return arr
 }
 
 export default function HomeGrid() {
   const [arr, setArr] = useState([])
   useEffect(() => {
-    setArr(shuffleArray(arr))
+    const newArr = shuffleArray()
+    setArr(() => newArr)
+    return () => {}
   }, [])
+
   return (
     <ul
       id='homeGrid'

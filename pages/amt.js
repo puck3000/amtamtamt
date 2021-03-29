@@ -11,7 +11,7 @@ export default function Amt() {
 
       {/* <header>header</header> */}
       <main className='w-full h-full flex justify-center items-center'>
-        <div className='m-6' layoutId='/amt'>
+        <div className='m-6'>
           <div className='block text-9xl' style={{ fontFamily: 'NeueBit' }}>
             ✨
           </div>

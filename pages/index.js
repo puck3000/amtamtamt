@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import HomeGrid from '../components/HomeGrid'
 
 export default function Home() {
