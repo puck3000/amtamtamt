@@ -72,20 +72,24 @@ export default function Scratchpad(color) {
             )}
 
             {counter > 7 && (
-              <p className={counter > 10 ? 'text-xl' : ''}>
+              <p className={counter > 10 ? 'text-2xl' : ''}>
                 Kulturförderung leider oft auch nicht.
               </p>
             )}
             {counter > 10 && (
-              <a
-                href='https://www.amt-fuer-ermoeglichung.ch/support'
-                target='_blank'
-                rel='noopener'
-                className='cursor-pointer'
-              >
-                <span className='animation-wiggle'>&rarr;</span> Kultur
-                ermöglichen
-              </a>
+              <div className='my-6'>
+                <a
+                  href='https://www.amt-fuer-ermoeglichung.ch/support'
+                  target='_blank'
+                  rel='noopener'
+                  className='relative cursor-pointer text-4xl my-12 p-2 border-4 border-black'
+                  style={{
+                    backgroundColor: '#fbf900',
+                  }}
+                >
+                  <span className=''>&rarr;</span> Kultur ermöglichen
+                </a>
+              </div>
             )}
           </div>
           {/* Falling Benjamins */}

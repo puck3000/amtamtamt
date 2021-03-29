@@ -92,7 +92,7 @@ function shuffleArray() {
 export default function HomeGrid() {
   const [arr, setArr] = useState([])
   useEffect(() => {
-    setArr(() => shuffleArray(arr))
+    setArr(shuffleArray(arr))
   }, [])
   return (
     <ul

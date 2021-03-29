@@ -138,6 +138,13 @@ export default function Quader({ data }) {
           objectFit='cover'
         />
       </div>
+      <style jsx>
+        {`
+          h2.title {
+            -webkit-text-stroke: 4px black;
+          }
+        `}
+      </style>
     </article>
   )
 }
