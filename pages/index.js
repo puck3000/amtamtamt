@@ -34,12 +34,11 @@ export default function Home() {
         />
         <meta
           property='og:description'
-          content='Die neuen Ämter hinterfragen das Gegenwärtige, forschen an zukünftigen Möglichkeiten, entwickeln Projekte und verbinden Menschen. '
+          content='Die neuen Ämter hinterfragen das Gegenwärtige, forschen an zukünftigen Möglichkeiten, entwickeln Projekte und verbinden Menschen.'
           key='ogdesc'
         />
       </Head>
 
-      {/* <header>header</header> */}
       <main className='w-screen min-h-screen'>
         <HomeGrid />
       </main>
@@ -51,7 +50,6 @@ export default function Home() {
       >
         Hella Studio
       </a>
-      {/* <footer>footer</footer> */}
     </div>
   )
 }
