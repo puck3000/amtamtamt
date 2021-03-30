@@ -42,7 +42,7 @@ export default function Amt() {
       <main className='w-full h-full flex justify-center items-center'>
         <div className='m-6'>
           <div className='block text-9xl' style={{ fontFamily: 'NeueBit' }}>
-            ✨
+            ⛅
           </div>
           <h1
             className='text-2xl md:text-3xl xl:text-5xl text-bold uppercase'
