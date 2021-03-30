@@ -43,10 +43,10 @@
   }
   @media screen and (min-width: 768px) {
     #homeGrid .hoverCard {
-      border: black solid 1.25rem;
+      border: black solid 2rem;
     }
     #homeGrid .title {
-      font-size: 12rem;
+      font-size: 8rem;
       line-height: 1;
     }
     #homeGrid .claim {
@@ -57,12 +57,20 @@
       font-size: 3rem;
     }
   }
-}
-
-@layer utilities {
-  /* purgecss start ignore */
-  .doNotPurge {
-    @apply order-1 order-2 order-3 order-4;
+  @media screen and (min-width: 1024px) {
+    #homeGrid .hoverCard {
+      border: black solid 2.5rem;
+    }
+    #homeGrid .title {
+      font-size: 10rem;
+    }
   }
-  /* purgecss end ignore */
+  @media screen and (min-width: 1280px) {
+    #homeGrid .hoverCard {
+      border: black solid 3rem;
+    }
+    #homeGrid .title {
+      font-size: 12rem;
+    }
+  }
 }

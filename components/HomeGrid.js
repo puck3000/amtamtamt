@@ -4,6 +4,7 @@ import Scratchpad from './Scratchpad'
 
 const amt_data = {
   title: 'AMT',
+  amtName: 'Amt der Ämter',
   linkInternal: true,
   claim: 'Iniziiert neue Ämter für die Herausforderungen von heute und morgen.',
   link: '/amt',
