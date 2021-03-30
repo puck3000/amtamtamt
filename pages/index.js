@@ -42,8 +42,15 @@ export default function Home() {
       {/* <header>header</header> */}
       <main className='w-screen min-h-screen'>
         <HomeGrid />
-        <div className='hidden doNotPurge'></div>
       </main>
+      <a
+        className='z-20 text-xs absolute transform origin-bottom-right -rotate-90 -top-2 right-0 px-2 uppercase bg-white'
+        href='https://hellastudio.ch'
+        target='_blank'
+        rel='noopener'
+      >
+        Hella Studio
+      </a>
       {/* <footer>footer</footer> */}
     </div>
   )
