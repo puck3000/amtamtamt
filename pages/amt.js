@@ -18,7 +18,7 @@ export default function Amt() {
         <meta property='og:url' content='https://amtamtamt.ch' key='ogurl' />
         <meta
           property='og:image'
-          content='/assets/sm_stuff/AMT-Facebook_Visuals_1.jpg'
+          content='assets/sm_stuff/AMT-Facebook_Visuals_1.jpg'
           key='ogimage'
         />
         <meta
