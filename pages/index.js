@@ -34,7 +34,7 @@ export default function Home() {
         />
         <meta
           property='og:description'
-          content='AMTAMTAMT | Amt für Zukunft | Amt für Ermöglichung'
+          content='Die neuen Ämter hinterfragen das Gegenwärtige, forschen an zukünftigen Möglichkeiten, entwickeln Projekte und verbinden Menschen. '
           key='ogdesc'
         />
       </Head>
