@@ -7,6 +7,10 @@ export default function Home() {
     <div className='md:h-screen md:flex md:flex-col md:justify-center md:items-center'>
       <Head>
         <title>AMT | AFZ | AFE</title>
+        <meta
+          name='description'
+          content='Die neuen Ämter hinterfragen das Gegenwärtige, forschen an zukünftigen Möglichkeiten, entwickeln Projekte und verbinden Menschen.'
+        />
         <link rel='icon' href='/favicon.ico' />
         {/* Twitter */}
         <meta
