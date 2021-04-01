@@ -82,36 +82,22 @@ const afz_data = {
   color: '#00a5eb',
 }
 
-function shuffleArray() {
-  let arr = [1, 2, 3, 4]
-  arr.sort(() => Math.random() - 0.5)
-  console.log(arr)
-  return arr
-}
-
 export default function HomeGrid() {
-  const [arr, setArr] = useState([])
-  useEffect(() => {
-    const newArr = shuffleArray()
-    setArr(() => newArr)
-    return () => {}
-  }, [])
-
   return (
     <ul
       id='homeGrid'
       className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 min-h-screen'
     >
-      <li className={`order-${arr[0]}`}>
+      <li>
         <Quader data={amt_data} />
       </li>
-      <li className={`order-${arr[1]}`}>
+      <li>
         <Quader data={afe_data} />
       </li>
-      <li className={`order-${arr[2]}`}>
+      <li>
         <Quader data={afz_data} />
       </li>
-      <li className={`order-${arr[3]}`}>
+      <li>
         <Scratchpad color='#feed2e' />
       </li>
     </ul>

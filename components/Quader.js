@@ -17,23 +17,14 @@ export default function Quader({ data }) {
     setActiveImg((activeImg + 1) % data.images.length)
   }
 
-  function randomImgSwitcher() {
-    while (!hovering) {
-      setTimeout(() => {
-        switchImg()
-      }, randomTime())
-      return () => {
-        clearTimeout()
-      }
-    }
-  }
-
   useEffect(() => {
-    randomImgSwitcher()
+    setTimeout(() => {
+      switchImg()
+    }, randomTime())
     return () => {
       clearTimeout()
     }
-  })
+  }, [])
 
   return (
     <article
@@ -43,6 +34,7 @@ export default function Quader({ data }) {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
+      {/*  */}
       {matches
         ? hovering && (
             <div
@@ -61,7 +53,7 @@ export default function Quader({ data }) {
                           {data.amtName}
                         </h3>
                       )}
-                      <p className='text-center text-4xl'>
+                      <p className='text-center text-4xl leading-6'>
                         <span className='mr-4'>&rarr;</span>
                         {data.claim}
                       </p>
@@ -82,7 +74,7 @@ export default function Quader({ data }) {
                         {data.amtName}
                       </h3>
                     )}
-                    <p className='text-center text-4xl'>
+                    <p className='text-center text-4xl leading-6'>
                       <span className='mr-4'>&rarr;</span>
                       {data.claim}
                     </p>
@@ -116,12 +108,12 @@ export default function Quader({ data }) {
                 )}
               </div>
               {data.amtName && (
-                <h3 className='amtName leading-none -mt-2 mb-4 md:-mt-4'>
+                <h3 className='amtName leading-6 -mt-2 mb-0 md:mb-4 md:-mt-4'>
                   {data.amtName}
                 </h3>
               )}
 
-              <p className='claim'>{data.claim}</p>
+              <p className='claim leading-4'>{data.claim}</p>
             </div>
           )}
 

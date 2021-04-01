@@ -36,14 +36,13 @@
   }
   #homeGrid .claim {
     font-size: 1.5rem;
-    line-height: 1;
   }
   #homeGrid .arrow {
     font-size: 3rem;
   }
   @media screen and (min-width: 768px) {
     #homeGrid .hoverCard {
-      border: black solid 2rem;
+      border: black solid 1.8rem;
     }
     #homeGrid .title {
       font-size: 8rem;
@@ -51,7 +50,6 @@
     }
     #homeGrid .claim {
       font-size: 1.5rem;
-      line-height: 1;
     }
     #homeGrid .arrow {
       font-size: 3rem;
@@ -59,7 +57,7 @@
   }
   @media screen and (min-width: 1024px) {
     #homeGrid .hoverCard {
-      border: black solid 2.5rem;
+      border: black solid 2.2rem;
     }
     #homeGrid .title {
       font-size: 10rem;
@@ -67,7 +65,7 @@
   }
   @media screen and (min-width: 1280px) {
     #homeGrid .hoverCard {
-      border: black solid 3rem;
+      border: black solid 2.5rem;
     }
     #homeGrid .title {
       font-size: 12rem;
