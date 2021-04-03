@@ -24,7 +24,7 @@ export default function Quader({ data }) {
     return () => {
       clearTimeout()
     }
-  }, [])
+  })
 
   return (
     <article
