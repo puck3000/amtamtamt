@@ -23,7 +23,7 @@ export default function Home() {
         <meta property='og:url' content='https://amtamtamt.ch' key='ogurl' />
         <meta
           property='og:image'
-          content='sm_stuff/AMT-Facebook_Visuals_1.jpg'
+          content='sm_stuff/AMT_SoMe_KeyVisual.jpg'
           key='ogimage'
         />
         <meta
